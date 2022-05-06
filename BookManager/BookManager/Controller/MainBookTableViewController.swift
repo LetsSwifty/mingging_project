@@ -8,9 +8,14 @@
 import UIKit
 
 class MainBookTableViewController: UITableViewController {
+    
+    var bookArray: [Book] = []
+    var favoriteBookArray: [Book] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "전체 책 리스트"
         
         // 우측 인셋 제거
         self.tableView.separatorInset = .zero
@@ -22,14 +27,62 @@ class MainBookTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        getBookData()
+        
+        
+        getDummyBookData()
+//        getSaveBookData()
     }
     
-    func getBookData() {
+    override func viewWillAppear(_ animated: Bool) {
+        getSaveBookData()
+        self.tableView.reloadData()
+    }
+    
+    @objc func selectFavoriteButton(sender: UIButton) {
+
+        let book = bookArray[sender.tag]
+        
+        if UserDefaults.standard.bool(forKey: "\(book.idx)") {
+            UserDefaults.standard.set(false, forKey: "\(book.idx)")
+            sender.setImage(UIImage(named: "favorite_ic"), for: .normal)
+            
+            favoriteBookArray = favoriteBookArray.filter { $0.idx != book.idx }
+            
+        } else {
+            UserDefaults.standard.set(true, forKey: "\(book.idx)")
+            sender.setImage(UIImage(named: "favorite_select_ic"), for: .normal)
+            
+            favoriteBookArray.append(book)
+        }
+        
+
+        // 즐겨찾기 한 값 저장
+        do {
+            let favoriteBookDataArray = try JSONEncoder().encode(favoriteBookArray)
+            UserDefaults.standard.set(favoriteBookDataArray, forKey: "favoriteBookArray")
+        } catch(let error) {
+            print(error)
+        }
+        
+    }
+    
+    func getSaveBookData() {
+        favoriteBookArray = []
+        if let data = UserDefaults.standard.data(forKey: "favoriteBookArray") {
+            do {
+                let favoriteBook = try JSONDecoder().decode([Book].self, from: data)
+                favoriteBookArray = favoriteBook
+            } catch {
+                print("Unable to Decode Favorite Players (\(error))")
+            }
+        }
+    }
+    
+    func getDummyBookData() {
         guard let data = dummyBookData.data(using: .utf8) else { return }
         do {
             let json = try JSONDecoder().decode([Book].self, from: data)
-            print(json)
+            bookArray = json
         } catch (let error) {
             print(error)
         }
@@ -44,15 +97,29 @@ class MainBookTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return bookArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let book = bookArray[indexPath.row]
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as? BookTableViewCell else { return UITableViewCell() }
-
-        cell.bookTitleLabel.text = "1234"
+        cell.selectionStyle = .none
+        
+        cell.bookImageView.imageLoad(url: book.bookImageUrl)
+        cell.bookTitleLabel.text = book.bookTitle
+        cell.bookDescriptionLabel.text = book.bookDescription
+        
+        if UserDefaults.standard.bool(forKey: "\(book.idx)") {
+            cell.favoriteButton.setImage(UIImage(named: "favorite_select_ic"), for: .normal)
+        } else {
+            cell.favoriteButton.setImage(UIImage(named: "favorite_ic"), for: .normal)
+        }
+        
+        cell.favoriteButton.tag = indexPath.row
+        cell.favoriteButton.addTarget(self, action: #selector(selectFavoriteButton), for: .touchUpInside)
         
         return cell
     }

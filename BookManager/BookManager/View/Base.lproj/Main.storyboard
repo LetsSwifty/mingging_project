@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,7 @@
                         <barButtonItem key="rightBarButtonItem" title="마이페이지" image="person.fill" catalog="system" id="8fY-nE-zUF">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="luK-Qk-k27" kind="show" id="cUp-7q-wKS"/>
+                                <segue destination="TiY-vx-sLf" kind="show" id="cga-j1-tQ0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,7 +71,56 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axl-tU-tGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="73"/>
+            <point key="canvasLocation" x="1367" y="721"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="2Ah-99-cLA">
+            <objects>
+                <viewController id="TiY-vx-sLf" customClass="MyPageViewController" customModule="BookManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="or5-OY-tDE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8PC-Sb-dDf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="801-CS-HZZ">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="801-CS-HZZ" id="t3w-xT-UDL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="책 목록이 비어있습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CW5-1Q-qT4">
+                                <rect key="frame" x="121" y="437" width="171" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LPN-DK-uFT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LPN-DK-uFT" firstAttribute="trailing" secondItem="8PC-Sb-dDf" secondAttribute="trailing" id="0CP-LH-5bg"/>
+                            <constraint firstItem="8PC-Sb-dDf" firstAttribute="top" secondItem="LPN-DK-uFT" secondAttribute="top" id="f2b-Ft-6aO"/>
+                            <constraint firstItem="LPN-DK-uFT" firstAttribute="bottom" secondItem="8PC-Sb-dDf" secondAttribute="bottom" id="g6K-WC-c69"/>
+                            <constraint firstItem="8PC-Sb-dDf" firstAttribute="leading" secondItem="LPN-DK-uFT" secondAttribute="leading" id="tvd-5A-tEi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PkB-SN-QWO"/>
+                    <connections>
+                        <outlet property="emptyLabel" destination="CW5-1Q-qT4" id="61K-fR-BbT"/>
+                        <outlet property="myPageTableView" destination="8PC-Sb-dDf" id="zvo-bR-s0c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lQ-VY-n9N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2207.2463768115945" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7hs-9T-NuL">

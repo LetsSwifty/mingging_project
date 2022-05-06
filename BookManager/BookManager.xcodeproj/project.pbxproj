@@ -10,9 +10,11 @@
 		392752FD2822D74B009C2894 /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392752FC2822D74A009C2894 /* MyPageTableViewController.swift */; };
 		392752FF2822D7CF009C2894 /* DummyBookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392752FE2822D7CF009C2894 /* DummyBookData.swift */; };
 		392753012822D872009C2894 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392753002822D872009C2894 /* Book.swift */; };
+		392753032824C716009C2894 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392753022824C716009C2894 /* Extensions.swift */; };
+		392753052824F572009C2894 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392753042824F572009C2894 /* Singleton.swift */; };
+		3927530728250099009C2894 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3927530628250099009C2894 /* MyPageViewController.swift */; };
 		39466BCB2822CED800265DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39466BCA2822CED800265DF2 /* AppDelegate.swift */; };
 		39466BCD2822CED800265DF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39466BCC2822CED800265DF2 /* SceneDelegate.swift */; };
-		39466BCF2822CED800265DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39466BCE2822CED800265DF2 /* ViewController.swift */; };
 		39466BD22822CED800265DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39466BD02822CED800265DF2 /* Main.storyboard */; };
 		39466BD42822CEDB00265DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39466BD32822CEDB00265DF2 /* Assets.xcassets */; };
 		39466BD72822CEDB00265DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39466BD52822CEDB00265DF2 /* LaunchScreen.storyboard */; };
@@ -25,10 +27,12 @@
 		392752FC2822D74A009C2894 /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		392752FE2822D7CF009C2894 /* DummyBookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBookData.swift; sourceTree = "<group>"; };
 		392753002822D872009C2894 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		392753022824C716009C2894 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		392753042824F572009C2894 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		3927530628250099009C2894 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		39466BC72822CED800265DF2 /* BookManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39466BCA2822CED800265DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39466BCC2822CED800265DF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		39466BCE2822CED800265DF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39466BD12822CED800265DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		39466BD32822CEDB00265DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39466BD62822CEDB00265DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,9 +104,9 @@
 		39466BE02822CF0000265DF2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				39466BCE2822CED800265DF2 /* ViewController.swift */,
 				39466BE42822D13300265DF2 /* MainBookTableViewController.swift */,
 				392752FC2822D74A009C2894 /* MyPageTableViewController.swift */,
+				3927530628250099009C2894 /* MyPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				392752FE2822D7CF009C2894 /* DummyBookData.swift */,
+				392753022824C716009C2894 /* Extensions.swift */,
+				392753042824F572009C2894 /* Singleton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -214,9 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				392753012822D872009C2894 /* Book.swift in Sources */,
-				39466BCF2822CED800265DF2 /* ViewController.swift in Sources */,
+				392753032824C716009C2894 /* Extensions.swift in Sources */,
+				392753052824F572009C2894 /* Singleton.swift in Sources */,
 				39466BE52822D13300265DF2 /* MainBookTableViewController.swift in Sources */,
 				392752FD2822D74B009C2894 /* MyPageTableViewController.swift in Sources */,
+				3927530728250099009C2894 /* MyPageViewController.swift in Sources */,
 				39466BCB2822CED800265DF2 /* AppDelegate.swift in Sources */,
 				39466BE92822D1DB00265DF2 /* BookTableViewCell.swift in Sources */,
 				39466BCD2822CED800265DF2 /* SceneDelegate.swift in Sources */,

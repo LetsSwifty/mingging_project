@@ -8,20 +8,76 @@
 import UIKit
 
 class MyPageTableViewController: UITableViewController {
+    
+    let emptyLabel = UILabel()
+    
+    var favoriteBookArray: [Book] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "마이페이지"
+        
         self.tableView.separatorInset = .zero
         self.tableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        
+        if let data = UserDefaults.standard.data(forKey: "favoriteBookArray") {
+            do {
+                let favoriteBook = try JSONDecoder().decode([Book].self, from: data)
+                favoriteBookArray = favoriteBook
+            } catch {
+                print("Unable to Decode Favorite Players (\(error))")
+            }
+        }
+        
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        emptyLabel.text = "책 목록이 비어있습니다."
+        emptyLabel.textColor = .systemGray4
+        emptyLabel.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
+        self.view.addSubview(emptyLabel)
+        self.view.bringSubviewToFront(emptyLabel)
+        
+//        print(favoriteBookArray.isEmpty)
+//        print(favoriteBookArray.count)
+//        if favoriteBookArray.isEmpty {
+//            emptyLabel.isHidden = false
+//        } else {
+//            emptyLabel.isHidden = true
+//        }
     }
     
-    
+    @objc func selectFavoriteButton(sender: UIButton) {
+        
+        let alert = UIAlertController(title: "즐겨찾기 삭제", message: "삭제하시겠습니까?", preferredStyle: .alert)
+        let okAnction = UIAlertAction(title: "삭제", style: .cancel) { _ in
+            let favoriteBook = self.favoriteBookArray[sender.tag]
+            
+            if UserDefaults.standard.bool(forKey: "\(favoriteBook.idx)") {
+                Singleton.shared.startLoading(view: self.view)
+                UserDefaults.standard.set(false, forKey: "\(favoriteBook.idx)")
+                
+                self.favoriteBookArray = self.favoriteBookArray.filter { $0.idx != favoriteBook.idx }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    Singleton.shared.stopLoading()
+                }
+            }
+            
+            // 즐겨찾기 한 값 저장
+            do {
+                let favoriteBookDataArray = try JSONEncoder().encode(self.favoriteBookArray)
+                UserDefaults.standard.set(favoriteBookDataArray, forKey: "favoriteBookArray")
+            } catch(let error) {
+                print(error)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alert.addAction(okAnction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: false, completion: nil)
+    }
 
     // MARK: - Table view data source
 
@@ -32,14 +88,24 @@ class MyPageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return favoriteBookArray.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let favoriteBook = favoriteBookArray[indexPath.row]
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as? BookTableViewCell else { return UITableViewCell() }
-
-        cell.bookTitleLabel.text = "1234"
+        cell.selectionStyle = .none
+        
+        cell.bookImageView.imageLoad(url: favoriteBook.bookImageUrl)
+        cell.bookTitleLabel.text = favoriteBook.bookTitle
+        cell.bookDescriptionLabel.text = favoriteBook.bookDescription
+        
+        cell.favoriteButton.setImage(UIImage(named: "favorite_select_ic"), for: .normal)
+        cell.favoriteButton.tag = indexPath.row
+        cell.favoriteButton.addTarget(self, action: #selector(selectFavoriteButton), for: .touchUpInside)
         
         return cell
     }

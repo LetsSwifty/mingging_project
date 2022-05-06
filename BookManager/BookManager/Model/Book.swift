@@ -15,12 +15,14 @@ import Foundation
  }
  */
 
-struct Book: Decodable {
+struct Book: Codable {
+    var idx: String
     var bookImageUrl: String
     var bookTitle: String
     var bookDescription: String
     
     enum CodingKeys: String, CodingKey {
+        case idx
         case bookImageUrl = "book_image_url"
         case bookTitle = "book_title"
         case bookDescription = "book_description"
