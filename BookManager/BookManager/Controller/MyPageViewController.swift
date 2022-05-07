@@ -54,16 +54,14 @@ class MyPageViewController: UIViewController {
                 
                 self.favoriteBookArray = self.favoriteBookArray.filter { $0.idx != favoriteBook.idx }
                 
-                DispatchQueue.main.async {
-                    self.myPageTableView.reloadData()
-                    
-                    Singleton.shared.stopLoading()
-                    
-                    if self.favoriteBookArray.isEmpty {
-                        self.emptyLabel.isHidden = false
-                    } else {
-                        self.emptyLabel.isHidden = true
-                    }
+                self.myPageTableView.reloadData()
+                
+                Singleton.shared.stopLoading()
+                
+                if self.favoriteBookArray.isEmpty {
+                    self.emptyLabel.isHidden = false
+                } else {
+                    self.emptyLabel.isHidden = true
                 }
             }
             

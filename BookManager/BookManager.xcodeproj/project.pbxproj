@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		392752FD2822D74B009C2894 /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392752FC2822D74A009C2894 /* MyPageTableViewController.swift */; };
 		392752FF2822D7CF009C2894 /* DummyBookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392752FE2822D7CF009C2894 /* DummyBookData.swift */; };
 		392753012822D872009C2894 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392753002822D872009C2894 /* Book.swift */; };
 		392753032824C716009C2894 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392753022824C716009C2894 /* Extensions.swift */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		392752FC2822D74A009C2894 /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		392752FE2822D7CF009C2894 /* DummyBookData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBookData.swift; sourceTree = "<group>"; };
 		392753002822D872009C2894 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		392753022824C716009C2894 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				39466BE42822D13300265DF2 /* MainBookTableViewController.swift */,
-				392752FC2822D74A009C2894 /* MyPageTableViewController.swift */,
 				3927530628250099009C2894 /* MyPageViewController.swift */,
 			);
 			path = Controller;
@@ -223,7 +220,6 @@
 				392753032824C716009C2894 /* Extensions.swift in Sources */,
 				392753052824F572009C2894 /* Singleton.swift in Sources */,
 				39466BE52822D13300265DF2 /* MainBookTableViewController.swift in Sources */,
-				392752FD2822D74B009C2894 /* MyPageTableViewController.swift in Sources */,
 				3927530728250099009C2894 /* MyPageViewController.swift in Sources */,
 				39466BCB2822CED800265DF2 /* AppDelegate.swift in Sources */,
 				39466BE92822D1DB00265DF2 /* BookTableViewCell.swift in Sources */,
