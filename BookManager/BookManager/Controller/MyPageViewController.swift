@@ -9,7 +9,7 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
-    var favoriteBookArray: [Book] = []
+    var favoriteBookArray: [Documents] = []
     
     @IBOutlet weak var myPageTableView: UITableView!
     @IBOutlet weak var emptyLabel: UILabel!
@@ -26,7 +26,7 @@ class MyPageViewController: UIViewController {
         
         if let data = UserDefaults.standard.data(forKey: "favoriteBookArray") {
             do {
-                let favoriteBook = try JSONDecoder().decode([Book].self, from: data)
+                let favoriteBook = try JSONDecoder().decode([Documents].self, from: data)
                 favoriteBookArray = favoriteBook
             } catch {
                 print("Unable to Decode Favorite Players (\(error))")
@@ -48,16 +48,16 @@ class MyPageViewController: UIViewController {
         let okAnction = UIAlertAction(title: "삭제", style: .cancel) { _ in
             let favoriteBook = self.favoriteBookArray[sender.tag]
             
-            if UserDefaults.standard.bool(forKey: "\(favoriteBook.idx)") {
+            if UserDefaults.standard.bool(forKey: "\(favoriteBook.isbn)") {
                 Singleton.shared.startLoading(view: self.view)
-                UserDefaults.standard.set(false, forKey: "\(favoriteBook.idx)")
-                
-                self.favoriteBookArray = self.favoriteBookArray.filter { $0.idx != favoriteBook.idx }
-                
+                UserDefaults.standard.set(false, forKey: "\(favoriteBook.isbn)")
+
+                self.favoriteBookArray = self.favoriteBookArray.filter { $0.isbn != favoriteBook.isbn }
+
                 self.myPageTableView.reloadData()
-                
+
                 Singleton.shared.stopLoading()
-                
+
                 if self.favoriteBookArray.isEmpty {
                     self.emptyLabel.isHidden = false
                 } else {
@@ -93,9 +93,9 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as? BookTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
         
-        cell.bookImageView.imageLoad(url: favoriteBook.bookImageUrl)
-        cell.bookTitleLabel.text = favoriteBook.bookTitle
-        cell.bookDescriptionLabel.text = favoriteBook.bookDescription
+        cell.bookImageView.imageLoad(url: favoriteBook.thumbnail)
+        cell.bookTitleLabel.text = favoriteBook.title
+        cell.bookDescriptionLabel.text = favoriteBook.contents
         
         cell.favoriteButton.setImage(UIImage(named: "favorite_select_ic"), for: .normal)
         cell.favoriteButton.tag = indexPath.row
