@@ -12,7 +12,7 @@ class MainBookTableViewController: UITableViewController {
     var bookArray: [Documents] = []
     var favoriteBookArray: [Documents] = []
     
-    let APIKey = "KakaoAK c43c3e26c2d7a8cb6804b7adf7bc0916"
+    let APIKey = "KakaoAK "
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,6 @@ class MainBookTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getSaveBookData()
-        self.tableView.reloadData()
     }
     
     @objc func selectFavoriteButton(sender: UIButton) {
@@ -67,6 +66,9 @@ class MainBookTableViewController: UITableViewController {
             do {
                 let favoriteBook = try JSONDecoder().decode([Documents].self, from: data)
                 favoriteBookArray = favoriteBook
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             } catch {
                 print("Unable to Decode Favorite Players (\(error))")
             }
@@ -130,7 +132,6 @@ class MainBookTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as? BookTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
     
-        print(book.title)
         cell.bookImageView.imageLoad(url: book.thumbnail)
         cell.bookTitleLabel.text = book.title
         cell.bookDescriptionLabel.text = book.contents
