@@ -1,0 +1,6 @@
+framework module Pods_RatioEx {
+  umbrella header "Pods-RatioEx-umbrella.h"
+
+  export *
+  module * { export * }
+}

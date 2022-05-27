@@ -5,7 +5,6 @@
 //  Created by minimani on 2022/05/06.
 //
 
-import Foundation
 import UIKit
 
 class Singleton {

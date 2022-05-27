@@ -12,7 +12,8 @@ class MainBookTableViewController: UITableViewController {
     var bookArray: [Documents] = []
     var favoriteBookArray: [Documents] = []
     
-    let APIKey = "KakaoAK "
+    let APIKey = "KakaoAK c43c3e26c2d7a8cb6804b7adf7bc0916"
+    var cellHeight: CGFloat = 153
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,22 +115,17 @@ class MainBookTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return bookArray.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as? BookTableViewCell else { return UITableViewCell() }
+
         let book = bookArray[indexPath.row]
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as? BookTableViewCell else { return UITableViewCell() }
         cell.selectionStyle = .none
     
         cell.bookImageView.imageLoad(url: book.thumbnail)
@@ -149,10 +145,6 @@ class MainBookTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 153
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        return cellHeight
     }
 }

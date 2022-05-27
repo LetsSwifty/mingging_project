@@ -10,6 +10,7 @@ import UIKit
 class MyPageViewController: UIViewController {
 
     var favoriteBookArray: [Documents] = []
+    var cellHeight: CGFloat = 153
     
     @IBOutlet weak var myPageTableView: UITableView!
     @IBOutlet weak var emptyLabel: UILabel!
@@ -19,19 +20,12 @@ class MyPageViewController: UIViewController {
 
         self.title = "마이페이지"
         
-        self.myPageTableView.separatorInset = .zero
-        self.myPageTableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         self.myPageTableView.delegate = self
         self.myPageTableView.dataSource = self
+        self.myPageTableView.separatorInset = .zero
+        self.myPageTableView.register(UINib(nibName: "BookTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         
-        if let data = UserDefaults.standard.data(forKey: "favoriteBookArray") {
-            do {
-                let favoriteBook = try JSONDecoder().decode([Documents].self, from: data)
-                favoriteBookArray = favoriteBook
-            } catch {
-                print("Unable to Decode Favorite Players (\(error))")
-            }
-        }
+        getFavoriteBookData()
         
         emptyLabel.center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
         emptyLabel.textColor = .systemGray4
@@ -39,6 +33,17 @@ class MyPageViewController: UIViewController {
             emptyLabel.isHidden = false
         } else {
             emptyLabel.isHidden = true
+        }
+    }
+    
+    func getFavoriteBookData() {
+        if let data = UserDefaults.standard.data(forKey: "favoriteBookArray") {
+            do {
+                let favoriteBook = try JSONDecoder().decode([Documents].self, from: data)
+                favoriteBookArray = favoriteBook
+            } catch {
+                print("Unable to Decode Favorite Players (\(error))")
+            }
         }
     }
     
@@ -105,7 +110,7 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 153
+        return cellHeight
     }
     
     
