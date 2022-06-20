@@ -8,6 +8,9 @@
 import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
+    
+    let imageView = UIImageView()
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setUpCell()
@@ -19,11 +22,11 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpCell() {
-        let testLabel = UILabel()
-        testLabel.text = "123"
-        self.contentView.addSubview(testLabel)
-        testLabel.snp.makeConstraints { make in
-            make.width.height.equalTo(30)
+        imageView.backgroundColor = .systemGray4
+        imageView.contentMode = .scaleToFill
+        self.contentView.addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
     }
 }

@@ -88,3 +88,184 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+UnsplashGallery/Pods/Alamofire/README.md
+UnsplashGallery/Pods/Alamofire/Source/Alamofire.swift
+UnsplashGallery/Pods/Alamofire/Source/Concurrency.swift
+UnsplashGallery/Pods/Manifest.lock
+UnsplashGallery/Pods/Pods.xcodeproj/project.pbxproj
+UnsplashGallery/Pods/SDWebImage/LICENSE
+UnsplashGallery/Pods/SDWebImage/README.md
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/NSButton+WebCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/NSButton+WebCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/NSData+ImageContentType.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/NSData+ImageContentType.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/NSImage+Compatibility.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/NSImage+Compatibility.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImage.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImagePlayer.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImagePlayer.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageRep.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageRep.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView+WebCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView+WebCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDAnimatedImageView.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDDiskCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDDiskCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDGraphicsImageRenderer.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDGraphicsImageRenderer.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageAPNGCoder.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageAPNGCoder.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageAWebPCoder.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageAWebPCoder.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCacheConfig.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCacheDefine.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCacheDefine.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCachesManager.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCachesManager.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCoder.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCoder.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCoderHelper.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCoderHelper.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCodersManager.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageCodersManager.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageFrame.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageFrame.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageGIFCoder.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageGIFCoder.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageGraphics.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageGraphics.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageHEICCoder.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageHEICCoder.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageIOAnimatedCoder.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageIOAnimatedCoder.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageIOCoder.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageIOCoder.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageLoader.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageLoader.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageLoadersManager.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageLoadersManager.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDImageTransformer.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDMemoryCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDMemoryCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheKeyFilter.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheKeyFilter.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheSerializer.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageCacheSerializer.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageCompat.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageCompat.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDefine.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDefine.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloader.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloader.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderConfig.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderConfig.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderDecryptor.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderDecryptor.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderOperation.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderOperation.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderRequestModifier.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderRequestModifier.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderResponseModifier.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageDownloaderResponseModifier.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageError.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageError.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageIndicator.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageIndicator.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageManager.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageManager.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageOperation.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageOperation.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageOptionsProcessor.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageOptionsProcessor.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImagePrefetcher.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImagePrefetcher.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageTransition.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/SDWebImageTransition.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIButton+WebCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIButton+WebCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+ExtendedCacheData.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+ExtendedCacheData.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+ForceDecode.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+ForceDecode.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+GIF.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+GIF.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+MemoryCacheCost.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+MemoryCacheCost.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+Metadata.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+Metadata.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+MultiFormat.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+MultiFormat.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImage+Transform.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImageView+HighlightedWebCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImageView+HighlightedWebCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImageView+WebCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIImageView+WebCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIView+WebCache.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIView+WebCache.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIView+WebCacheOperation.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Core/UIView+WebCacheOperation.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/NSBezierPath+SDRoundedCorners.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/NSBezierPath+SDRoundedCorners.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDAssociatedObject.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDAssociatedObject.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDAsyncBlockOperation.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDAsyncBlockOperation.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDDeviceHelper.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDDeviceHelper.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDDisplayLink.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDDisplayLink.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDFileAttributeHelper.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDFileAttributeHelper.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDImageAssetManager.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDImageAssetManager.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDImageCachesManagerOperation.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDImageCachesManagerOperation.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDImageIOAnimatedCoderInternal.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDInternalMacros.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDInternalMacros.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDmetamacros.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDWeakProxy.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDWeakProxy.m
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/SDWebImageTransitionInternal.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/UIColor+SDHexString.h
+UnsplashGallery/Pods/SDWebImage/SDWebImage/Private/UIColor+SDHexString.m
+UnsplashGallery/Pods/SDWebImage/WebImage/SDWebImage.h
+UnsplashGallery/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-acknowledgements.markdown
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-acknowledgements.plist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Debug-input-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Debug-output-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Release-input-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Release-output-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks.sh
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery.debug.xcconfig
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery.release.xcconfig
+UnsplashGallery/Pods/Target Support Files/SDWebImage/SDWebImage-dummy.m
+UnsplashGallery/Pods/Target Support Files/SDWebImage/SDWebImage-Info.plist
+UnsplashGallery/Pods/Target Support Files/SDWebImage/SDWebImage-prefix.pch
+UnsplashGallery/Pods/Target Support Files/SDWebImage/SDWebImage-umbrella.h
+UnsplashGallery/Pods/Target Support Files/SDWebImage/SDWebImage.debug.xcconfig
+UnsplashGallery/Pods/Target Support Files/SDWebImage/SDWebImage.modulemap
+UnsplashGallery/Pods/Target Support Files/SDWebImage/SDWebImage.release.xcconfig
+UnsplashGallery/Pods/Alamofire/README.md
+UnsplashGallery/Pods/Alamofire/Source/Alamofire.swift
+UnsplashGallery/Pods/Alamofire/Source/Concurrency.swift
+UnsplashGallery/Pods/Manifest.lock
+UnsplashGallery/Pods/Pods.xcodeproj/project.pbxproj
+UnsplashGallery/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-acknowledgements.markdown
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-acknowledgements.plist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Debug-input-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Debug-output-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Release-input-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks-Release-output-files.xcfilelist
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery-frameworks.sh
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery.debug.xcconfig
+UnsplashGallery/Pods/Target Support Files/Pods-UnsplashGallery/Pods-UnsplashGallery.release.xcconfig
