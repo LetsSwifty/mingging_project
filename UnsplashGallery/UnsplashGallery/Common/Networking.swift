@@ -17,12 +17,13 @@ class Networking {
         let header: HTTPHeaders = ["Authorization": UserInfo.clientID]
         
         AF.request(url, method: .get, parameters: parameter, headers: header).responseDecodable(of: [Photos].self) { response in
+            print("aaaaaaaaa\(response.request?.url)")
             switch response.result {
             case .success(let result):
-                print(result)
+//                print(result)
                 completion(result)
             case .failure(let error):
-                print(error)
+                print("error")
             }
         }
     }
